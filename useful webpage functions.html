@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"-->
+<script src="https://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+$('#nee').click(function(event) {
+  $('#n1').text('1')
+});
+
+
+$(document).ready(function() {
+$("#bg").show();
+$(window).bind("scroll", function() {
+
+if ($(this).scrollTop() > 520) {
+    $("#bg").stop().fadeOut(50);
+} else if($(this).scrollTop() < 520){
+    $("#bg").stop().fadeIn(50);
+}
+})
+});
+
+
+$(document).ready(function() {
+
+$(window).bind("scroll", function() {
+
+if (($(this).scrollTop() > 920)||($(this).scrollTop() < 520)) {
+    $("#bg2").stop().fadeOut(50);
+} else if(($(this).scrollTop() < 920) && ($(this).scrollTop()>520)){
+    $("#bg2").stop().fadeIn(50);
+}
+})
+})
+$(document).ready(function() {
+
+$(window).bind("scroll", function() {
+
+if (($(this).scrollTop() > 1320)||($(this).scrollTop() < 920)) {
+    $("#bg3").stop().fadeOut(50);
+} else if(($(this).scrollTop() < 1320) && ($(this).scrollTop()>920)){
+    $("#bg3").stop().fadeIn(50);
+}
+})
+})
+
+$(document).ready(function() {
+
+$(window).bind("scroll", function() {
+
+if (($(this).scrollTop() > 1720)||($(this).scrollTop() < 1320)) {
+    $("#bg4").stop().fadeOut(50);
+} else if(($(this).scrollTop() < 1720) && ($(this).scrollTop()>1320)){
+    $("#bg4").stop().fadeIn(50);
+}
+})
+})
+$(document).ready(function() {
+
+$(window).bind("scroll", function() {
+
+if (($(this).scrollTop() > 2120)||($(this).scrollTop() < 1720)) {
+    $("#bg5").stop().fadeOut(50);
+} else if(($(this).scrollTop() < 2120) && ($(this).scrollTop()>1720)){
+    $("#bg5").stop().fadeIn(50);
+}
+})
+})
+
+
+</script>
+<style>
+
+body{
+  height: 3800px;
+}
+
+#bg{
+    position: fixed;
+    display: none;
+    background: url("blackball.jpg");
+    height: 17px;
+    width: 17px;
+    
+z-index: 5;
+}
+#bg2{
+    position: fixed;
+    display: none;
+    background: url("blackball.jpg");
+    height: 17px;
+    width: 17px;
+  
+z-index: 5;
+}
+#bg3{
+    position: fixed;
+    display: none;
+    background: url("blackball.jpg");
+    height: 17px;
+    width: 17px;
+  
+z-index: 5;
+}
+#bg4{
+    position: fixed;
+    display: none;
+    background: url("blackball.jpg");
+    height: 17px;
+    width: 17px;
+  
+z-index: 5;
+}
+#bg5{
+    position: fixed;
+    display: none;
+    background: url("blackball.jpg");
+    height: 17px;
+    width: 17px;
+  
+z-index: 5;
+}
+#ball:hover #bg{
+  display: block;
+}
+#sidebar{
+  list-style-type: none;
+  position: fixed;
+top: -8px;
+left: -32px;
+background-repeat:no-repeat;
+z-index: 9999;
+}
+#cir1{
+  background: url("whiteball.jpg");
+  width: 15px;
+  height: 15px;
+cursor: pointer;
+z-index: 1000;
+ -webkit-transition: all 0.3s ease-out;
+background-repeat:no-repeat;
+}
+#blackball{
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-out;
+}
+#cir1:hover #blackball{
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease-out;
+}
+#sidebar1{
+  list-style-type: none;
+  position: fixed;
+top: 10px;
+left: -32px;
+background-repeat:no-repeat;
+z-index: 9999;
+}
+#sidebar2{
+  list-style-type: none;
+  position: fixed;
+top: 28px;
+left: -32px;
+background-repeat:no-repeat;
+z-index: 9999;
+}
+#sidebar3{
+  list-style-type: none;
+  position: fixed;
+top: 46px;
+left: -32px;
+background-repeat:no-repeat;
+z-index: 9999;
+}
+#sidebar4{
+  list-style-type: none;
+  position: fixed;
+top: 64px;
+left: -32px;
+background-repeat:no-repeat;
+z-index: 9999;
+}
+#dif{
+  background: url("whiteball.jpg");
+  width: 14px;
+  height: 14px;
+ -webkit-transition:all .3s ease-in-out;
+
+}
+#ba{
+  background: url("blackball.jpg");
+  width: 14px;
+  height: 14px;
+  position: fixed;
+  top: 152px;
+opacity: 0;
+-webkit-transition: opacity .2s ease-in-out;
+}
+.mom:hover #ba{
+    opacity: 1;
+}
+#media{
+  background-image:url("media.jpg");
+  height:337px;
+  width:25%;
+  position:fixed;
+background-color: blue;
+ 
+}
+</style>
+</head>
+<body>
+<div id="bg"></div>
+<div id="ball">
+<img src="whiteball.jpg" style="position: fixed;">
+</div>
+<br>
+<div id="bg2"></div>
+<img src="whiteball.jpg" style="position: fixed;" id="ball2">
+<br>
+<div id="bg3"></div>
+<img src="whiteball.jpg" style="position: fixed;" id="ball3">
+<br>
+<div id="bg4"></div>
+<img src="whiteball.jpg" style="position: fixed;" id="ball4" >
+<br>
+<div id="bg5"></div>
+<img src="whiteball.jpg" style="position: fixed;" id="ball5" >
+<p id="output" style="position:fixed; left:50%; top:20%; padding:10px; color:grey;font-weight:bold">
+  You have scrolled the page by:
+</p>
+
+<script>
+
+var output = $('#output')
+
+$(window).scroll(function(){
+  var scrollTop = window.pageYOffset 
+  output.html("You have scrolled the page by: " + scrollTop +'px')
+
+})
+.animate({
+  width: '0px',
+  },
+  3000, function(i,orig) {
+  /* stuff to do after animation is complete */
+});
+</script>
+  <ul id="sidebar">
+        <li id="cir1"><img src="blackball.jpg" id="blackball"></li>
+      </ul>
+      <ul id="sidebar1">
+        <li id="cir1"><div ><img src="blackball.jpg" id="blackball"></div></li>
+      </ul>
+       <ul id="sidebar2">
+        <li id="cir1"><div ><img src="blackball.jpg" id="blackball"></div></li>
+      </ul>
+       <ul id="sidebar3">
+        <li id="cir1"><div ><img src="blackball.jpg" id="blackball"></div></li>
+      </ul>
+       <ul id="sidebar4">
+        <li id="cir1"><div ><img src="blackball.jpg" id="blackball"></div></li>
+      </ul>
+      <br> <br> <br> <br>
+  <div class="mom">
+     <div id="dif"> </div>
+     <a href="" id="ba"></a>
+   </div>
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script> 
+var width = $(window).innerWidth() - 20;
+var anim = function(elm)
+{
+    if (elm.position().left + 100 > width) elm.css ({left: 0});
+    elm.animate ({left: '+=10'}, 400, 'linear', function(){anim (elm)});
+};
+
+$(document).ready (function()
+{
+  anim ($('#'));
+});
+</script> 
+</head>
+<body>
+
+<button id="b">Start Animation</button>
+
+<div id='div'></div>
+
+<div style="" id="media"></div>
+<button id="nee" onclick="hi()" style="position: absolute;top: 500px;left: 500px;">dashjkd</button>
+<p id="n1" style="position: absolute;top: 550px;left: 500px;">1fsdfdsf</p>
+</body>
+</html>
+
+
+</body>
+</html>
+
